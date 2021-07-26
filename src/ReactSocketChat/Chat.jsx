@@ -89,13 +89,13 @@ export default function Chat() {
       </Container>
       <Container>
         <Navbar bg="transparent" fixed="bottom" variant="light" className="d-flex justify-content-between">
-          <div><Navbar.Brand><strong style={{color: "#ffffff", letterSpacing:"0.12rem"}}>Niku419</strong></Navbar.Brand></div>
+          <div><Navbar.Brand><strong style={{color: "#000", letterSpacing:"0.12rem"}}>Niku419</strong></Navbar.Brand></div>
           <div>
             <Nav className="mr-auto">
-              <Nav.Link href="https://github.com/niku419"><FontAwesomeIcon  icon={faGithub} color="#ffffff" /></Nav.Link>
-              <Nav.Link href="https://linkedin.com/niku_419"><FontAwesomeIcon  icon={faLinkedinIn}  color="#ffffff"/></Nav.Link>
-              <Nav.Link href="https://instagram.com/_niku_419"><FontAwesomeIcon  icon={faInstagram}  color="#ffffff"/></Nav.Link>
-              <Nav.Link href="https://www.facebook.com/profile.php?id=100069976086066"><FontAwesomeIcon icon={faFacebookF}  color="#ffffff"/></Nav.Link>
+              <Nav.Link href="https://github.com/niku419"><FontAwesomeIcon  icon={faGithub} color="#000" /></Nav.Link>
+              <Nav.Link href="https://linkedin.com/niku_419"><FontAwesomeIcon  icon={faLinkedinIn}  color="#000"/></Nav.Link>
+              <Nav.Link href="https://instagram.com/_niku_419"><FontAwesomeIcon  icon={faInstagram}  color="#000"/></Nav.Link>
+              <Nav.Link href="https://www.facebook.com/profile.php?id=100069976086066"><FontAwesomeIcon icon={faFacebookF}  color="#000"/></Nav.Link>
             </Nav>
           </div>
           {/* <Form inline>
