@@ -12,9 +12,10 @@ export default function Chat() {
   const [chat, setChat] = useState([])
 
   useEffect(() => {
-    socketRef.current = io.connect('https://react-socket-messaging-server.herokuapp.com/',{ transports: ['websocket', 'polling', 'flashsocket'] })
+    socketRef.current = io.connect('https://react-socket-server.herokuapp.com/',{ transports: ['websocket', 'polling', 'flashsocket'] })
     socketRef.current.on('message',({message, name}) => {
       setChat([...chat, {message,name}])
+      console.log(message, name)
     })
     dummy.current.scrollIntoView({behaviour: 'smooth'})
     return () => {
@@ -23,7 +24,6 @@ export default function Chat() {
   }, [chat]) 
 
   function sendMessage(e){
-    console.log(name,message)
     setName(pname)
     socketRef.current.emit("message", {message, name})
     e.preventDefault()
@@ -37,10 +37,13 @@ export default function Chat() {
     <>
       <Container className="mt-5 flex-fill flex-column d-flex border border-light border-bottom-0">
         <Container style={{overflow: "auto", paddingTop: "2rem"}}>
-          <div style={{ width: 'fill', height:"30rem"}}>
+          <div style={{ width: 'fill', height:"25rem"}}>
             <ListGroup variant="flush">
               {chat.map(({ name, message }, index) => (
-                <div key={index}>{name}:{message}</div>
+                <div key={index}>
+                  <span style={{display: "inline"}} className="text-muted">{message}: </span>
+                  <span style={{display: "inline"}}>{name}</span>
+                </div>
               ))}
             </ListGroup>
             <div ref={dummy}></div>
