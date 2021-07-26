@@ -1,9 +1,10 @@
 import React,{useState, useRef, useEffect} from 'react'
-import { Container, Form, Button, InputGroup, ListGroup, Nav, Navbar} from "react-bootstrap";
+import { Container, Form, Button, InputGroup, ListGroup } from "react-bootstrap";
 import io from 'socket.io-client'
 // import { faHeart } from '@fortawesome/free-solid-svg-icons'
-import { faInstagram, faGithub, faFacebookF, faLinkedinIn} from '@fortawesome/free-brands-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import { faInstagram, faGithub, faFacebookF, faLinkedinIn} from '@fortawesome/free-brands-svg-icons'
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import { Nav, Navbar } from 'react-bootstrap'
 
 
 export default function Chat() {
@@ -88,7 +89,7 @@ export default function Chat() {
           </Form>}
         </Container>
       </Container>
-      <Container>
+      {/* <Container>
         <Navbar bg="transparent" fixed="bottom" variant="light" className="d-flex justify-content-between">
           <div><Navbar.Brand><strong style={{color: "#000", letterSpacing:"0.12rem"}}>Niku419</strong></Navbar.Brand></div>
           <div>
@@ -99,13 +100,13 @@ export default function Chat() {
               <Nav.Link href="https://www.facebook.com/profile.php?id=100069976086066"><FontAwesomeIcon icon={faFacebookF}  color="#000"/></Nav.Link>
             </Nav>
           </div>
-          {/* <Form inline>
+          <Form inline>
             <Nav className="mr-auto"> 
               <Nav.Link>made for Hiku<FontAwesomeIcon color="#8d0101" icon={faHeart} /></Nav.Link>
             </Nav>
-          </Form> */}
+          </Form>
         </Navbar>
-			</Container>
+			</Container> */}
     </>
   )
 }
