@@ -12,7 +12,7 @@ export default function Chat() {
   const [chat, setChat] = useState([])
 
   useEffect(() => {
-    socketRef.current = io.connect('http://localhost:3001',{ transports: ['websocket', 'polling', 'flashsocket'] })
+    socketRef.current = io.connect('https://react-socket-messaging-server.herokuapp.com/',{ transports: ['websocket', 'polling', 'flashsocket'] })
     socketRef.current.on('message',({message, name}) => {
       setChat([...chat, {message,name}])
     })
