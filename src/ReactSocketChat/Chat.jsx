@@ -79,6 +79,7 @@ export default function Chat() {
                   setPName(e.target.value)
                 }
                 value={pname}
+                required
               />
               <InputGroup.Append>
                 <Button variant="outline-secondary" type="submit">Set Name</Button>
