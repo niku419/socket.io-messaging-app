@@ -36,6 +36,7 @@ export default function Chat() {
   return (
     <>
       <Container className="mt-5 flex-fill flex-column d-flex border border-light border-bottom-0">
+      <div className="mb-4"><h1 className="heading">React Socket Chat</h1></div>
         <Container style={{overflow: "auto", paddingTop: "2rem"}}>
           <div style={{ width: 'fill', height:"25rem"}}>
             <ListGroup variant="flush">
