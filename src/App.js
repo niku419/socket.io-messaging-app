@@ -1,13 +1,13 @@
 import React from 'react'
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import Paypal from './ReactPaypal/Paypal'
+import Chat from './ReactSocketChat/Chat'
 
 function App() {
 
   return (
     <div>
-      <Paypal/>
+      <Chat/>
     </div>
   )
 }
